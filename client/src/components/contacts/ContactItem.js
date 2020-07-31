@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ContactItem = ({ contact }) => {
+  console.log(contact);
   const { id, name, email, phone, type } = contact;
   return (
     <div className='card bg-light'>
@@ -39,7 +40,7 @@ const ContactItem = ({ contact }) => {
 };
 
 ContactItem.propTypes = {
-  contact: PropTypes.array.isRequired,
+  contact: PropTypes.object.isRequired,
 };
 
 export default ContactItem;
