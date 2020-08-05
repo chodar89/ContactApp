@@ -9,7 +9,7 @@ import {
   UPDATE_CONTACT,
   FILTER_CONTACTS,
   CLEAR_FILTER,
-  SET_CURRENT,
+  SET_ALERT,
 } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 

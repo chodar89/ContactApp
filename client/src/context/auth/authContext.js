@@ -1,4 +1,4 @@
-import { createContext } from 'reac';
+import { createContext } from 'react';
 
 const authContext = createContext();
 
