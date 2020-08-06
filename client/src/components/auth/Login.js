@@ -8,8 +8,7 @@ const Login = () => {
 
   const { email, password } = user;
 
-  const onChange = (e) =>
-    setUser({ ...user, [e.target.value]: e.target.value });
+  const onChange = (e) => setUser({ ...user, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,7 +23,13 @@ const Login = () => {
       <form onSubmit={onSubmit}>
         <div className='form-group'>
           <label htmlFor='email'>Email Address</label>
-          <input type='email' name='email' value={email} onChange={onChange} />
+          <input
+            type='email'
+            name='email'
+            value={email}
+            onChange={onChange}
+            required
+          />
         </div>
         <div className='form-group'>
           <label htmlFor='password'>Password</label>
@@ -33,6 +38,7 @@ const Login = () => {
             name='password'
             value={password}
             onChange={onChange}
+            required
           />
         </div>
         <input
